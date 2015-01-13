@@ -1,0 +1,32 @@
+{% if description %}
+description "{{ description }}"
+{% endif %}
+
+start on [2345]
+stop on [06]
+
+respawn
+
+{% if env %}
+{% for key, value in env.iteritems() %}
+env {{key}}={{value}}
+{% endfor %}
+{% endif %}
+
+{% if export %}
+{% for variable in exports %}
+export {{variable}}
+{% endfor %}
+{% endif %}
+
+{% if uid %}
+setuid {{uid}}
+{% endif %}
+
+{% if gid %}
+setgid {{gid}}
+{% endif %}
+
+{% if exec %}
+exec {{ exec }}
+{% endif %}

@@ -1,0 +1,5 @@
+{% set upstart_job = salt['grains.filter_by']({
+    'default': {
+        'path': '/etc/init/'
+    },
+}, merge=salt['pillar.get']('upstart_job:lookup')) %}

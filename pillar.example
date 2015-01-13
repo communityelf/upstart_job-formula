@@ -1,0 +1,14 @@
+upstart_job:
+  lookup:
+    jobs:
+      job_name:
+        description: A brief description.
+        start: 2345
+        end: 06
+        env:
+          SOME_VARIABLE: some value
+        export:
+          - SOME_VARIABLE
+        uid: username
+        gid: groupname
+        exec: /foo/bar --baz
