@@ -1,4 +1,4 @@
-{% from "template/map.jinja" import template with context %}
+{% from "upstart_job/map.jinja" import upstart_job with context %}
 
 {% if upstart_job['jobs'] %}
 {% for jobname, jobdef in upstart_job['jobs'].iteritems() %}
