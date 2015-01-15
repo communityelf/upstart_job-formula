@@ -14,7 +14,7 @@ env {{key}}={{value}}
 {% endif %}
 
 {% if export %}
-{% for variable in exports %}
+{% for variable in export %}
 export {{variable}}
 {% endfor %}
 {% endif %}
